@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>JSF 06 - EJB, bazy danych (mapowanie
+		obiektowo-relacyjne)</title>
+</h:head>
+<h:body style="background-color: #eee; margin: 0.5em;">
+
+	<!-- <p:panel header="Opcje wyszukiwania" toggleable="true" collapsed="true"
+		style="margin-bottom: 1em;">
+		<h:form>
+			<h:panelGrid columns="2" cellpadding="5">
+				<h:outputLabel value="nazwisko:" />
+				<p:inputText value="#{personListBB.surname}" />
+				<p:commandButton value="Szukaj" update="form-table" />
+			</h:panelGrid>
+		</h:form>
+	</p:panel> -->
+
+	<p:messages />
+
+	<h:form id="form-table" style="margin-bottom:1em;">
+
+		<!-- <p:commandButton value="Dodaj nową osobę"
+			action="#{personListBB.newPerson()}" style="margin-bottom:1em;"/> -->
+
+		<p:dataTable value="#{userListBB.getFullList}" var="user">
+
+			<p:column priority="5">
+				<f:facet name="header">
+					<h:outputText value="id" />
+				</f:facet>
+				<h:outputText value="#{user.id}" />
+			</p:column>
+
+			<p:column priority="5">
+				<f:facet name="header">
+					<h:outputText value="login" />
+				</f:facet>
+				<h:outputText value="#{user.login}" />
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="email" />
+				</f:facet>
+				<h:outputText value="#{user.email}" />
+			</p:column>
+
+			<p:column priority="5">
+				<f:facet name="header">
+					<h:outputText value="imię" />
+				</f:facet>
+				<h:outputText value="#{user.forename}" />
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="nazwisko" />
+				</f:facet>
+				<h:outputText value="#{user.surname}" />
+			</p:column>
+
+			<!-- <p:column>
+				<f:facet name="header">
+					<h:outputText value="opcje" />
+				</f:facet>
+
+				<p:commandButton value="Edytuj"
+					action="#{personListBB.editPerson(user)}" />
+
+				<p:commandButton value="Usuń"
+					action="#{personListBB.deletePerson(user)}" update="@form" />
+
+				<p:button outcome="personEditGET" value="Edytuj (GET)">
+					<f:param name="user" value="#{user.idperson}" />
+				</p:button>
+			</p:column> -->
+
+		</p:dataTable>
+	</h:form>
+
+</h:body>
+</html>

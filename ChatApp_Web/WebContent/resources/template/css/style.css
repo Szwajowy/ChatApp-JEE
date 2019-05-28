@@ -1,0 +1,122 @@
+.main-box {
+    background: #DDD;
+    border-radius: 12px;
+
+    padding: 2em;
+    margin-top: 1.2em;
+}
+
+.friend-list {
+    background: #EEE;
+    border-radius: 1em;
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    padding: 1em;
+    margin-top: 1.6em;
+}
+
+.friend-list .friend-item {
+	width: 100px;
+    margin-right:  1.3em;
+}
+
+.friend-list .friend-item .friend-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.friend-list .friend-item .friend-image img {
+    width: 150px;
+    margin: 50% 0 0 50%;
+    transform: translate(-50%,-50%);
+}
+
+.friend-list .friend-item .friend-name {
+    width: 100%;
+    margin-top: 0.6em;
+    text-align: center;
+    
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.friend-list .friend-item .friend-name:hover {
+	color: #2c7ba5;
+}
+
+.friend-list .friend-item .friend-name:active {
+	color: #DDD;
+}
+
+.chat-box {
+    background: #EEE;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+#messages-list {
+	height: 400px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.chat-header {
+    margin-top: 1.4em;
+}
+
+.message {
+    color: #FFF;
+    max-width: 60%;
+    padding: 1em;
+    margin-bottom: 0.6em;
+    border-radius: 1em;
+}
+
+.my-message {
+    background: #2c7ba5;
+}
+
+.friend-message {
+    background: #0e3042;
+}
+
+.chat-bottombar {
+    margin-top: auto;
+}
+
+.chat-input {
+    width: 90%;
+    background: #FAFAFA;
+    border: none;
+    border-radius: 1em 0 0 1em;
+    padding: 0.6em;
+}
+
+.chat-input:focus {
+    background: #FFF;
+    border: 1px solid #2c7ba5;
+    outline: none;
+}
+
+.chat-submit {
+    width: 10%;
+    
+    color: #FFF;
+    background: #2c7ba5;
+    border: none;
+    border-radius: 0 1em 1em 0;
+}
+
+.chat-submit:hover {
+    background: #0e3042;
+}
+
+.chat-submit:focus {
+    outline: none;
+}
